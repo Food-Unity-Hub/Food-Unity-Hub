@@ -20,7 +20,7 @@ export class AddUserComponent {
     form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
-      gender: new FormControl('', Validators.required)
+      //gender: new FormControl('', Validators.required)
     });
 
     addUser() {

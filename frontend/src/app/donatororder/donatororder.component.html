@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <style>
+
+body{
+           /* background: linear-gradient(270deg,#4B0082,#704214e0 ,#001F3F) ;*/
+            transition: all 0.4s ease-in-out;
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            background-color: #fedede;
+        }
+        body::-webkit-scrollbar {
+            width: 0.25rem;
+        }
+        body::-webkit-scrollbar-track {
+            background: linear-gradient(270deg,#4B0082,#001F3F);
+        }
+        body::-webkit-scrollbar-thumb {
+            background: #6649b8;
+        }
+        @keyframes gradient {
+            0% {
+              background-position: 0% 50%;
+        
+            }
+            50% {
+              background-position: 100% 50%;            
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+        }
+        
+nav.navbar {
+            background-color: transparent;
+            color: #FF6666; 
+            margin: auto;            
+            width: 85%;
+           
+            align-items: center;
+        }
+
+        nav.navbar div.inside{
+            background-color: transparent;
+    border-radius: 50px;
+    backdrop-filter: blur(1px);
+    box-shadow: 0px 4px 8px black;
+        }
+
+        nav.navbar div.inside div.page{
+            justify-content: space-between;
+        }
+        nav.navbar div.inside div.page a.navbar-brand {
+           color: #d35400;
+           font-weight: bolder;
+           font-family: 'Monsterrat', sans-serif;        
+
+        }
+        nav.navbar div.inside div.pages ul.navbar-nav li.nav-item a.nav-link{
+            color: #d35400;
+            font-weight: 700;
+            font-family: 'Monsterrat', sans-serif;
+            border-radius: 50px;
+        }
+        nav.navbar div.inside div.pages ul.navbar-nav li.nav-item a.nav-link:hover{
+            color: whitesmoke ;
+            margin: auto;
+            font-family: 'Monsterrat', sans-serif;
+            background-color: #336699;
+            border-radius: 50px;
+            transform: scale(1.05);
+            transition: all 0.4s ease-in-out;
+        }
+
+        
+
+        nav.navbar div.inside button {
+            border-color: white;
+            
+        }
+
+
+        div.heading{
+            text-align: center;
+            font-family: 'Monsterrat', sans-serif;
+            font-weight: 700;
+            height: 80vh;
+            background-color: #001F3F;
+            font-size: 3rem;
+            color: #d35400;
+            background-image: url('https://www.compassion.com/multimedia/hungry-children.jpg');
+            text-align: center;
+            display: flex;
+            filter: #001F3F;
+            justify-content: center;    
+            background-size: cover;
+            image-resolution:calc(100% + 100%) ;
+            align-items: center;
+        }
+
+        section.dona{
+            display: flex;
+            justify-content: center;
+            height: 300vh;
+            gap: 16px;
+            background-color: #336699;
+            font-family: 'Monsterrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #d35400;
+        }
+
+      section.dona div.rest{
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            flex-direction: row;
+            background-color: #336699;
+            font-family: 'Monsterrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #d35400;
+        }
+
+        section.dona div.rest div.restimg , div.restdata{
+            flex-grow: 1;
+        }
+
+        section.dona div.rest div.restimg{
+            height: 100%;
+            width: 100%;
+        }
+
+        section.dona div.restdata {
+            height: 100%;
+            width: 100%;
+            background-color: #336699;
+            font-family: 'Monsterrat', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #d35400;
+        }
+
+
+        
+    section.hww{
+      max-width: 100%;
+      height: 250vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(20px);
+      justify-content: center;
+      flex-direction: column;
+      background-color: #fcebeb;
+      align-items: center;
+      opacity: 10; /* Start fully transparent */
+      transform: translateY(-80px); /* Start slightly below its final position */
+    }
+
+
+    section.hww.visible {
+        opacity: 1; /* Fade in to fully visible */
+        transform: translateY(-12%); /* Move to final position */
+    }
+
+    section.hww div.hwwe{
+     max-width: 100%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+    background: transparent;
+}
+
+
+    section.hww h2{
+      color: #704214;
+      font-weight: 700;
+      font-family: 'Monsterrat', sans-serif;
+      text-align: center;
+      font-size: xxx-large;
+      margin: auto;
+      padding: 40px;
+    }
+    
+    section.hww img{
+      width: 100%;
+    background-color: white;
+    border: 10px solid white;
+    box-shadow: 0px 0px 8px black;
+    }
+    section.hww div.resimg , div.imgngo {
+      max-width: 50%;
+      margin: auto;
+
+    }
+  
+
+    section.hww div.hwwe div.rest {
+      max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: auto;
+    /*clip-path: polygon(1% 3%, 99% 13%, 99% 84%, 1% 98%);
+        background: whitesmoke;*/
+    }
+
+    section.hww div.hwwe div.rest div.shado{
+      width: 102%;
+    height: 25%;
+    left: -2%;
+    clip-path: polygon(0% 3%, 100% 13%, 100% 84%, 0% 100%);
+    top: 133px;
+    background: #ffdbdbcf;
+    position: absolute;
+    z-index: -122;
+    }
+
+    section.hww div.hwwe div.ngo div.shado2{
+      width: 102%;
+    height: 25%;
+    left: -2%;
+    clip-path: polygon(0% 10%, 100% 1%, 100% 100%, 0% 81%);
+    top: 37%;
+    background: #ffdbdbcf;
+    position: absolute;
+    z-index: -122;  
+
+    }
+
+    section.hww div.hwwe div.donate div.shado3{
+      width: 102%;
+    height: 25%;
+    left: -2%;
+    clip-path: polygon(100% 34%, 100% 1%, 100% 84%, -7% 84%);
+    bottom: -4%;
+    background: #ffdbdbcf;
+    position: absolute;
+    z-index: -122;
+
+    }
+    
+    section.hww div.hwwe div.ngo{
+      display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    }
+
+    section.hww div.hwwe div.donate{
+      display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    }
+
+    section.hww h3{
+      color: #704214;
+      font-weight: 700;
+      font-family: 'Monsterrat', sans-serif;
+      text-align: left;
+      font-size: xxx-large;
+      margin: auto;
+      
+    }
+    section.hww p{
+      color: #d35400;
+      font-weight: 700;
+      font-family: 'Monsterrat', sans-serif;
+      text-align: left;
+      margin: auto;
+      font-size: large;
+    }
+    section.hww div.hwwe div.donate div.mainimage{
+      width: 100%;
+      height: 100%;
+    }
+    section.hww img.donateimg{
+    width: 100%;
+    border: 10px solid white;
+    box-shadow: 0px 0px 8px black;
+}
+    section.hww div.hwwe div.explres{
+      width: 100%;
+    padding: 0% 5% 5% 5%; 
+    margin: auto;
+
+}
+
+    section.hww div.hwwe div.explngo{
+      width: 100%;
+      padding: 0% 5% 5% 5%;   
+      margin: auto;
+    }
+
+    section.hww div.hwwe div.donateexp{
+      width: 100%;
+      height: 100%;
+      padding: 0% 5% 5% 5%; 
+      margin: auto;
+    }
+
+    div.join {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 20px;
+        max-width: 100%;
+        height: 20vh;
+        background-color: #336699;
+    }
+
+    div.join button{
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: 'Monsterrat', sans-serif;
+        color: #336699;
+        background-color: #fedede;
+        border: 2px solid #001F3F;
+        transition: all 0.4s ease-in-out;
+    }
+    div.join button:hover{
+        color: #fcebeb;
+        background-color: #336699;
+        border-radius: 50px;
+        transform: scale(1.05);
+        transition: all 0.4s ease-in-out;
+        a{
+            color: #fedede;
+        }
+    }
+    div.join button a{
+        text-decoration: none;
+        color: #336699;
+    }
+
+
+    button.donat{
+        font-size: 2rem;
+        font-weight: 700;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-family: 'Monsterrat', sans-serif;
+        color: #336699;
+        background-color: #fedede;
+        border: 2px solid #001F3F;
+        transition: all 0.4s ease-in-out;
+    }
+
+    button.donat:hover{
+        color: #fcebeb;
+        background-color: #336699;
+        border-radius: 50px;
+        transform: scale(1.05);
+        transition: all 0.4s ease-in-out;
+        a:hover{
+            color: #fedede;
+        }
+    }
+
+    button.donat a{
+        text-decoration: none;
+        color: #336699;
+    }
+
+    section.hww{
+      margin: 4%;
+      max-width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(20px);
+      justify-content: center;
+      flex-direction: column;
+      background-color: #fcebeb;
+      align-items: center;
+      opacity: 10; /* Start fully transparent */
+    
+    }
+
+    section.hww form{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      background-color: silver;
+      width: 90%;
+      border-radius: 10px;
+      height: 100%;
+      border: solid 3px black;
+      padding: 2%;
+      justify-content: center;
+    }
+    section.hww form input{
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #001F3F;
+    }
+    div.menu{
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      flex-direction: row;
+      background-color: #33669932;
+      font-family: 'Monsterrat', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #d35400;
+    }
+    div.img{
+      flex-grow: 1;
+    }
+    div.img img{
+      width: 100%;
+      border: 10px solid white;
+      box-shadow: 0px 0px 8px black;
+    }
+
+    div.donate input.submit{
+      font-size: 2rem;
+      font-weight: 700;
+      padding-left: 5%;
+      padding-right: 5%;
+      font-family: 'Monsterrat', sans-serif;
+      color: #336699;
+      background-color: #fedede;
+      border: 2px solid #001F3F;
+      transition: all 0.4s ease-in-out;
+    }
+
+    div.donate input.submit:hover{
+      color: #fcebeb;
+      background-color: #336699;
+      border-radius: 50px;
+      transform: scale(1.05);
+      transition: all 0.4s ease-in-out;
+      a:hover{
+          color: #fedede;
+      }}
+
+      div.donate{
+        flex-grow: 1;
+        width: 70%;
+      }
+      div.img{
+        flex-grow: 1;
+        width: 100%;
+      }
+      div.content{
+        flex-grow: 1;
+        width: 100%;
+      }
+
+      
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: rgb(235, 235, 235);
+}
+
+
+    </style>
+     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+     <script>
+       /**
+        * @license
+        * Copyright 2019 Google LLC. All Rights Reserved.
+        * SPDX-License-Identifier: Apache-2.0
+        */
+       // Note: This example requires that you consent to location sharing when
+       // prompted by your browser. If you see the error "The Geolocation service
+       // failed.", it means you probably did not give permission for the browser to
+       // locate you.
+       let map, infoWindow;
+ 
+       function initMap() {
+         map = new google.maps.Map(document.getElementById("map"), {
+           center: { lat: -34.397, lng: 150.644 },
+           zoom: 6,
+         });
+         infoWindow = new google.maps.InfoWindow();
+ 
+         const locationButton = document.createElement("button");
+ 
+         locationButton.textContent = "Pan to Current Location";
+         locationButton.classList.add("custom-map-control-button");
+         map.controls[google.maps.ControlPosition.TOP_CENTER].push(
+           locationButton
+         );
+         locationButton.addEventListener("click", () => {
+           // Try HTML5 geolocation.
+           if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(
+               (position) => {
+                 const pos = {
+                   lat: position.coords.latitude,
+                   lng: position.coords.longitude,
+                 };
+ 
+                 infoWindow.setPosition(pos);
+                 infoWindow.setContent("Location found.");
+                 infoWindow.open(map);
+                 map.setCenter(pos);
+               },
+               () => {
+                 handleLocationError(true, infoWindow, map.getCenter());
+               }
+             );
+           } else {
+             // Browser doesn't support Geolocation
+             handleLocationError(false, infoWindow, map.getCenter());
+           }
+         });
+       }
+ 
+       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+         infoWindow.setPosition(pos);
+         infoWindow.setContent(
+           browserHasGeolocation
+             ? "Error: The Geolocation service failed."
+             : "Error: Your browser doesn't support geolocation."
+         );
+         infoWindow.open(map);
+       }
+ 
+       window.initMap = initMap;
+     </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+     <div class="container inside">
+       <button class="navbar-toggler tog" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse page" id="navbarTogglerDemo01">
+        
+         <h2><a class="navbar-brand " id="name" href="home">
+             FOOD UNITY HUB
+           </a></h2>
+          
+
+           <div class="pages">
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+           <li class="nav-item">
+             <a class="nav-link active" aria-current="page" href="home"> HOME</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="NGO">NGOs</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/Restaurants">RESTAURANT</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/Donator">DONATOR</a>
+           </li>
+          
+           <li class="nav-item">
+             <a class="nav-link" href="/Contact"> CONTACT</a>
+           </li>
+           <li class="nav-item" >
+             <a class="nav-link" href="/Donate">Donate</a>
+            </li>
+           
+         </ul>
+         </div>
+         
+       </div>
+     </div>
+   </nav>
+ </header>
+    
+
+    <div class="container-fluid heading">
+        <div class="donatenow">
+            <h1><i>"Save Food, Save Humanity"</i></h1>
+        </div>
+    </div>
+
+   <section class="hww" id="hwwsection">
+      <form action="">
+        <h2>Choose Your Restaurant & NGOs {{responsedatdon.username}} </h2>
+        <input type="text" name="search" id="search" placeholder="Search for Restaurants">
+        <input type="text" name="search" id="search" placeholder="Search for NGOs">
+        <div class="menu">
+          <div class="img"><img src="assets\home\Screenshot 2024-02-21 193352.png" alt=""></div>
+          <div class="content"><h3>Dish Name</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur enim neque rem.</p></div>
+          <div class="donate">
+            <input type="submit" name="submit" id="Donate" value="Donate" class="submit">
+          </div>
+        </div>
+        
+      </form>
+    </section>
+
+
+    <div class="join">
+        <button><a href="/donatorregis">Join Now</a></button>
+    </div>
+
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFaXNvUSNlqQoqlNBgCgppWcSeYxb5kDM&callback=initMap&v=weekly&solution_channel=GMP_CCS_geolocation_v1"
+      defer
+    ></script>
+
+    <script>
+      
+let map, infoWindow;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 6,
+  });
+  infoWindow = new google.maps.InfoWindow();
+
+  const locationButton = document.createElement("button");
+
+  locationButton.textContent = "Pan to Current Location";
+  locationButton.classList.add("custom-map-control-button");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(
+    locationButton
+  );
+  locationButton.addEventListener("click", () => {
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Location found.");
+          infoWindow.open(map);
+          map.setCenter(pos);
+        },
+        () => {
+          handleLocationError(true, infoWindow, map.getCenter());
+        }
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  });
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
+
+window.initMap = initMap;
+    </script>
+
+    
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
