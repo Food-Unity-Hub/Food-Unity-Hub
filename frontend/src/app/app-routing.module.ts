@@ -27,8 +27,6 @@ import { RestproeditComponent } from './restproedit/restproedit.component';
 import { NgoproeditComponent } from './ngoproedit/ngoproedit.component';
 import { RestdonationComponent } from './restdonation/restdonation.component';
 import { DonatororderComponent } from './donatororder/donatororder.component';
-import { map } from 'rxjs';
-import { MapComponent } from './map/map.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'add', component: AddUserComponent },
@@ -60,8 +58,8 @@ const routes: Routes = [
   {path: 'editirestpro',component: RestproeditComponent},
   {path: 'editngopro',component: NgoproeditComponent},
   {path:'restdonation', component: RestdonationComponent},
-  {path:'Donate',component: DonatororderComponent},
-  {path:'map',component: MapComponent}
+  {path:'Donate',component: DonatororderComponent}
+
 ];
 
 @NgModule({

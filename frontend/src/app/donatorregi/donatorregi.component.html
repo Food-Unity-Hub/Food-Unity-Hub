@@ -346,10 +346,10 @@ nav.navbar {
              <a class="nav-link active" aria-current="page" href="home"> HOME</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="ngologin">NGOs</a>
+             <a class="nav-link" href="NGO">NGOs</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="/restlogin">RESTAURANT</a>
+             <a class="nav-link" href="/Restaurants">RESTAURANT</a>
            </li>
            <li class="nav-item">
              <a class="nav-link" href="/Donator">DONATOR</a>
@@ -372,15 +372,10 @@ nav.navbar {
 
 
  <section class="head">
-
-
  </section>
 
-
- <h1>{{responsedatango.name}}</h1>
-
  <section class="form">
-    <form #RegistrationForm ngSwitch="donregi(registerdo.value())">
+    <form [formGroup]="form" (ngSubmit)="donregi()">
         <h1>Register Yourself as a Donator of Food Unity Hub</h1>
         <input type="text" name="donatorid" id="donatorid" formControlName="donatorid" hidden>
         <input type="text" name="first" id="first" placeholder="Enter your First Name" class="name" formControlName="first"  required>

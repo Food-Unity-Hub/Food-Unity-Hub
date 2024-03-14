@@ -3,9 +3,6 @@ import { Router } from '@angular/router';
 import { UserService } from '../app.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, set, update } from 'firebase/database';
 @Component({
   selector: 'app-donatorregi',
   templateUrl: './donatorregi.component.html',
@@ -18,7 +15,7 @@ export class DonatorregiComponent {
     constructor(private router : Router , private service : UserService,private http: HttpClient) { }
   
     ngOnInit(): void {
-      this.refreshNotes();
+      
     }
     data : any;
 
@@ -29,8 +26,6 @@ export class DonatorregiComponent {
     return result;
 
     }
-
-   
 
     form = new FormGroup({
       donatorid : new FormControl(this.genrateid(),Validators.required),
@@ -46,7 +41,7 @@ export class DonatorregiComponent {
       password: new FormControl('', Validators.required),
 
       });
- 
+
     donregi(){
     //const  restaurid = localStorage.getItem('restaurid');
     //const headers = new HttpHeaders().set('Authorization', `Bearer ${restaurid}`);
@@ -68,21 +63,7 @@ export class DonatorregiComponent {
       }
     }
     );
-
-
-
     }
-
-
-
-    refreshNotes() {
-      this.service.getdata().subscribe(data => {
-        this.responsedatango = data;
-      });
-    }
-
-    
-
 
 
 }

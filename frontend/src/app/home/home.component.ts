@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-//import {AgmCoreModule} from '@agm/core';
 
 @Component({
   selector: 'app-home',

@@ -16,9 +16,7 @@
             "outputPath": "dist/frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -80,10 +78,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
@@ -99,6 +94,6 @@
     }
   },
   "cli": {
-    "analytics": "46df631b-88bb-48e8-afef-bfb5fff2cc74"
+    "analytics": "da0e4575-77ca-4126-862b-f85d935bd359"
   }
 }

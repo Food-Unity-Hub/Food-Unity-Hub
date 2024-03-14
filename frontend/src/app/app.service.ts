@@ -4,8 +4,6 @@ import { Observable } from 'rxjs';
 import { User } from './User';
 import { restregis } from './restregi';
 import { donation } from './donation';
-import { Firestore,addDoc, collection, collectionData, deleteDoc , deleteField , doc } from '@angular/fire/firestore';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -27,7 +25,7 @@ export class UserService {
   private donareurl : string = 'http://127.0.0.1:8000/api/donatorregis/';
 
 
-  constructor(private http: HttpClient, private fs : Firestore) { }
+  constructor(private http: HttpClient) { }
   
 
   addUser(user: User): Observable<User> {
@@ -88,18 +86,6 @@ export class UserService {
   }
   donateregister(donator: any): Observable<any> {
     return this.http.post<any>(this.donareurl, donator);
-  }
-
-
-  getdata(){
-    let notescollector = collection(this.fs, 'nots');
-    return collectionData(notescollector,{idField: 'id'});
-  }
-  
-  adddata(name :string){
-    let data = {description: name};
-    let notescollector = collection(this.fs, 'nots');
-    return addDoc(notescollector, data);
   }
 
 }

@@ -42,27 +42,6 @@ import { AddMenuComponent } from './add-menu/add-menu.component';
 import { RestproeditComponent } from './restproedit/restproedit.component';
 import { NgoproeditComponent } from './ngoproedit/ngoproedit.component';
 import { RestdonationComponent } from './restdonation/restdonation.component';
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { MapComponent } from './map/map.component';
-//import { GoogleMapsModule } from '@angular/google-maps'
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-export const environment = {
-
-  firebase :{
-  apiKey: "AIzaSyD5EeWZk1WPg1pYuhZptTPiQ60SuzyohPg",
-  authDomain: "food-unity-hub.firebaseapp.com",
-  databaseURL: "https://food-unity-hub-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "food-unity-hub",
-  storageBucket: "food-unity-hub.appspot.com",
-  messagingSenderId: "644891973175",
-  appId: "1:644891973175:web:0f7a2be04f9ea9a1ef11b2",
-  measurementId: "G-FP709R6KNM"
-  },
-  production: true
-}
 
 @NgModule({
   declarations: [
@@ -103,18 +82,13 @@ export const environment = {
     AddMenuComponent,
     RestproeditComponent,
     NgoproeditComponent,
-    RestdonationComponent,
-    MapComponent
+    RestdonationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
-    
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,6 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  
-  <style>
 
-gmp-map {
-  height: 100%;
-}
-
+    <style>
         body{
            /* background: linear-gradient(270deg,#4B0082,#704214e0 ,#001F3F) ;*/
             transition: all 0.4s ease-in-out;
@@ -554,18 +548,21 @@ margin: auto;
 
 section.contact{
   max-width: 100%;
-    height: 2vh;
+    height: 50vh;
     display: flex;
     background-color: #001F3F;
     justify-content: center;
 
 }
-section.contact h2{
-  color: #fedede;
-  font-size: xxx-large;
+section.contact div.contactus{
   margin: auto;
-  padding: 10px;
-  text-align: center;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    padding: 5%;
+    background: #fedede;
+    justify-content: center;
+    align-items: center;
 }
 section.contact div.contactus button{
   width: 40%;
@@ -659,44 +656,10 @@ section.footer img{
 
 section.contact {
   max-width: 100%;
-  height: 40vh;
+  height: 200vh;
   display: flex;
   background-color: #001F3F;
   justify-content: center;
-}
-
-section.map{
-  width: 100%;
-height: 80vh;
-}
-
-
-#map {
-  height: 100%;
-}
-
-/* Optional: Makes the sample page fill the window. */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.custom-map-control-button {
-  background-color: #fff;
-  border: 0;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-  margin: 10px;
-  padding: 0 0.5em;
-  font: 400 18px Roboto, Arial, sans-serif;
-  overflow: hidden;
-  height: 40px;
-  cursor: pointer;
-}
-.custom-map-control-button:hover {
-  background: rgb(235, 235, 235);
 }
 
     </style>
@@ -723,15 +686,17 @@ body {
                 <a class="nav-link active" aria-current="page" href="Home"> HOME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/ngologin" href="/ngologin">NGOs</a>
+                <a class="nav-link" routerLink="/NGO" href="/NGO">NGOs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/restlogin">RESTAURANT</a>
+                <a class="nav-link" href="/Restaurants">RESTAURANT</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Donator">DONATOR</a>
               </li>
-             
+              <li class="nav-item">
+                <a class="nav-link" href="About">ABOUT US</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="Contact"> CONTACT</a>
               </li>
@@ -785,7 +750,7 @@ body {
     <section class="whyw" id="whysection">
       <div class="why">
         <h2>Why We are?</h2>
-        <p>	In a world where compassion converges with purpose, our non-profit organization is dedicated to a pivotal mission: the elimination of hunger and the reduction of food wastage. At the core of our initiative is a synergistic collaboration between restaurants and NGOs. We adeptly retrieve surplus food from benevolent eateries, serving as a conduit that links surplus abundance to pressing needs. This surplus is transformed into sustenance, efficiently distributed by NGOs to those contending with hunger. Furthermore, individuals are encouraged to integrate their philanthropy into this fabric, contributing as their hearts lead them to the impactful NGOs. United by the force of collective benevolence, we are crafting a future where hunger is eradicated for everyone.</p>
+        <p>Food Unity Hub is a non-profit organization that works for humanity. We are here on Mission. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam consequuntur voluptates inventore aperiam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit adipisci facere tenetur beatae magnam ipsum dicta at cumque vitae delectus? Impedit aliquam distinctio, obcaecati laborum, dignissimos mollitia est, tenetur eveniet cum nemo quod dolorem error magni? Saepe ratione, esse blanditiis totam eos voluptates sit officiis, deserunt doloremque velit recusandae? Ex? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi aperiam ullam et assumenda reiciendis, ipsum vero maxime illo, numquam recusandae quae. Eius fuga porro adipisci maiores mollitia cumque a nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sed, reiciendis quos expedita placeat nam facilis similique nemo nulla ratione repellendus sapiente! Quia ducimus nobis ut aliquid exercitationem nulla provident? </p>
       </div>
     </section>
 
@@ -796,32 +761,32 @@ body {
       <div class="rest">
         <div class="shado"></div>
         <div class="resimg">
-          <img src="assets\home\donation rest.png" alt="Food Donation by Restaurants" >
+          <img src="assets/home/resta.png" alt="Food Donation by Restaurants" >
         </div>
 
         <div class="explres">
           <h3 class="rest">Restaurant's</h3>
-          <p>The surplus food inventory at partnering restaurants is meticulously documented and highlighted on our website. Subsequently, dedicated volunteers from our partnered NGOs swiftly mobilize, reaching out to these establishments. They adeptly collect both cooked and raw surplus food, ensuring nothing goes to waste. This bounty is then distributed strategically within the areas covered by the NGOs, bringing nourishment to those in need. This streamlined system exemplifies the impactful synergy between compassionate restaurants, generous donors, and our committed NGO partners, creating a chain of kindness that fights hunger at its roots.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias corporis beatae nulla veniam esse ex iure deserunt quod similique suscipit, quasi asperiores, temporibus illo consectetur consequuntur atque mollitia corrupti alias molestiae. Magnam, aspernatur eos cupiditate architecto dolore sunt rem debitis libero exercitationem a harum deserunt, non dolores blanditiis saepe!</p>
         </div>
       </div>
       <div class="ngo">
         <div class="shado2"></div>
         <div class="imgngo">
-          <img src="assets\home\doantion ngo.png" alt="Non-Government Organization">
+          <img src="assets\home\ngos.png" alt="Non-Government Organization">
         </div>
         <div class="explngo">
           <h3 class="ngo">Non-Government organization (NGOs)</h3>
-          <p>	Our community/site operates collaboratively with NGOs to address food wastage and alleviate hunger. At the close of each day, participating restaurants input data on surplus food onto our platform. This information is made accessible to registered NGOs, empowering them to identify and collect surplus food from the restaurants. This streamlined process facilitates a more efficient and targeted distribution system, ensuring that excess food is redirected to those in need. By bridging the gap between food providers and NGOs, our platform serves as a catalyst for reducing food waste and making a meaningful impact on the lives of the less fortunate in our community.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores optio earum in laudantium voluptate sed quia repudiandae commodi. Quibusdam, dolore. Aut, quae! Voluptatum rem corrupti, aspernatur ullam neque architecto vel quam quo dicta, ab aperiam nostrum veniam consequatur ad deleniti suscipit. Laboriosam quam quis dolores ab fugit minus illum.</p>
         </div>
       </div>
         <div class="donate">
           <div class="shado3"></div>
           <div class="mainimage">
-            <img src="assets\home\donation food ngo.png" class="donateimg" alt="Food Donation By Food Unity Hub">
+            <img src="assets/home/donation.png" class="donateimg" alt="Food Donation By Food Unity Hub">
           </div>
           <div class="donateexp">
             <h3 class="donate">Donators</h3>
-            <p>Donating on our site is a straightforward process designed to connect generous individuals with those in need. When a donor wishes to contribute, they can browse through a list of participating restaurants on our platform. Once a restaurant is selected, donors can choose specific menu items they wish to donate and specify the quantity. Upon confirmation, the chosen restaurant receives a notification to prepare the designated food for donation. Subsequently, our partnered NGO is alerted and arranges to collect the donated items. This seamless system ensures that the generous contributions of individuals quickly translate into tangible assistance for the less fortunate, creating a direct and efficient channel for charitable giving through our platform.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et laboriosam eveniet atque fuga vitae tempora, distinctio odio, iure sint repellat maiores. Laborum exercitationem alias possimus maiores! Cumque voluptate eum dolores. Minus ducimus quas et quos molestiae, similique, quam, facere praesentium tempore velit ipsam reprehenderit saepe quis necessitatibus dolor incidunt assumenda!</p>
           </div>
         </div>
       </div>
@@ -831,7 +796,7 @@ body {
       <h3> <strong> <b> "Save Food, Save Humanity" </b></strong><br> by <br><span>Join us</span></h3>
       <div class="suppor">
       <div class="suppimg">
-        <img src="assets\home\Gemini_Generated_Image.jpeg" alt="" class="ressup">
+        <img src="assets/home/REST.png" alt="" class="ressup">
         <img src="assets/home/NGOSUP.png" alt="" class="ngosup">
         <img src="assets/home/DONATOR.png" alt="" class="donsup">
       </div>
@@ -849,22 +814,22 @@ body {
         </span> as a NGOs</a>
 
 
-       <a href="Donator" class="button">as a Donator</a>
+       <a href="" class="button">as a Donator</a>
       </div>
     </div>
     </section>
 
 
     <section class="contact">
-      <h2><q>Save Food, Save Humanity with <b>Food Unity Hub</b></q></h2>
+      <div class="contactus">
+        <button><a href="">Contact</a></button>
+      </div>
     </section>
-    <app-map></app-map>
-  
-    
+
     <section class="footer">
       <div class="focon">
         <div class="logo">
-          <img src="assets\home\android-chrome-512x512.png" alt="Food Unity Hub">
+          <img src="D:\food Unity Hub\FOOD UNITY HUB.png" alt="Food Unity Hub">
           <blockquote>Save Food, Save Humanity</blockquote>
         </div>
         <div class="row1">
@@ -888,4 +853,72 @@ body {
           </ul>
       </div>
  
-   
+    <script  >
+      //home page section 2 animation effect
+ 
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: [0.1] }); // Trigger when 10% of `section.who` is visible
+
+        let whoSection = document.getElementById('Section');
+        observer.observe("whoSection");
+    });
+    
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: [0.2] }); // Trigger when 10% of `section.who` is visible
+
+        let whoSection = document.getElementById('dataSection');
+        observer.observe(whoSection);
+    });
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: [0.2] }); // Trigger when 10% of `section.who` is visible
+
+        let whoSection = document.getElementById('whysection');
+        observer.observe(whoSection);
+    });
+
+
+    let menuicn = document.querySelector(".menuicn"); 
+    let nav = document.querySelector(".navcontainer"); 
+    
+    menuicn.addEventListener("click", () => { 
+        nav.classList.toggle("navclose"); 
+    })
+
+    
+
+// profile click image display
+
+function myFunction() {
+    var x = document.getElementById("content");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+    </script>

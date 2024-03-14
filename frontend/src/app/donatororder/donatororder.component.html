@@ -376,198 +376,10 @@ nav.navbar {
         color: #336699;
     }
 
-    section.hww{
-      margin: 4%;
-      max-width: 100%;
-      height: 100vh;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      transform: translateY(20px);
-      justify-content: center;
-      flex-direction: column;
-      background-color: #fcebeb;
-      align-items: center;
-      opacity: 10; /* Start fully transparent */
-    
-    }
 
-    section.hww form{
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      background-color: silver;
-      width: 90%;
-      border-radius: 10px;
-      height: 100%;
-      border: solid 3px black;
-      padding: 2%;
-      justify-content: center;
-    }
-    section.hww form input{
-      margin: 0;
-      font-family: inherit;
-      font-size: inherit;
-      line-height: inherit;
-      background: transparent;
-      border: none;
-      border-bottom: 2px solid #001F3F;
-    }
-    div.menu{
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      flex-direction: row;
-      background-color: #33669932;
-      font-family: 'Monsterrat', sans-serif;
-      font-weight: 700;
-      font-size: 2rem;
-      color: #d35400;
-    }
-    div.img{
-      flex-grow: 1;
-    }
-    div.img img{
-      width: 100%;
-      border: 10px solid white;
-      box-shadow: 0px 0px 8px black;
-    }
-
-    div.donate input.submit{
-      font-size: 2rem;
-      font-weight: 700;
-      padding-left: 5%;
-      padding-right: 5%;
-      font-family: 'Monsterrat', sans-serif;
-      color: #336699;
-      background-color: #fedede;
-      border: 2px solid #001F3F;
-      transition: all 0.4s ease-in-out;
-    }
-
-    div.donate input.submit:hover{
-      color: #fcebeb;
-      background-color: #336699;
-      border-radius: 50px;
-      transform: scale(1.05);
-      transition: all 0.4s ease-in-out;
-      a:hover{
-          color: #fedede;
-      }}
-
-      div.donate{
-        flex-grow: 1;
-        width: 70%;
-      }
-      div.img{
-        flex-grow: 1;
-        width: 100%;
-      }
-      div.content{
-        flex-grow: 1;
-        width: 100%;
-      }
-
-      
-#map {
-  height: 100%;
-}
-
-/* Optional: Makes the sample page fill the window. */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.custom-map-control-button {
-  background-color: #fff;
-  border: 0;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-  margin: 10px;
-  padding: 0 0.5em;
-  font: 400 18px Roboto, Arial, sans-serif;
-  overflow: hidden;
-  height: 40px;
-  cursor: pointer;
-}
-.custom-map-control-button:hover {
-  background: rgb(235, 235, 235);
-}
 
 
     </style>
-     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-     <script>
-       /**
-        * @license
-        * Copyright 2019 Google LLC. All Rights Reserved.
-        * SPDX-License-Identifier: Apache-2.0
-        */
-       // Note: This example requires that you consent to location sharing when
-       // prompted by your browser. If you see the error "The Geolocation service
-       // failed.", it means you probably did not give permission for the browser to
-       // locate you.
-       let map, infoWindow;
- 
-       function initMap() {
-         map = new google.maps.Map(document.getElementById("map"), {
-           center: { lat: -34.397, lng: 150.644 },
-           zoom: 6,
-         });
-         infoWindow = new google.maps.InfoWindow();
- 
-         const locationButton = document.createElement("button");
- 
-         locationButton.textContent = "Pan to Current Location";
-         locationButton.classList.add("custom-map-control-button");
-         map.controls[google.maps.ControlPosition.TOP_CENTER].push(
-           locationButton
-         );
-         locationButton.addEventListener("click", () => {
-           // Try HTML5 geolocation.
-           if (navigator.geolocation) {
-             navigator.geolocation.getCurrentPosition(
-               (position) => {
-                 const pos = {
-                   lat: position.coords.latitude,
-                   lng: position.coords.longitude,
-                 };
- 
-                 infoWindow.setPosition(pos);
-                 infoWindow.setContent("Location found.");
-                 infoWindow.open(map);
-                 map.setCenter(pos);
-               },
-               () => {
-                 handleLocationError(true, infoWindow, map.getCenter());
-               }
-             );
-           } else {
-             // Browser doesn't support Geolocation
-             handleLocationError(false, infoWindow, map.getCenter());
-           }
-         });
-       }
- 
-       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-         infoWindow.setPosition(pos);
-         infoWindow.setContent(
-           browserHasGeolocation
-             ? "Error: The Geolocation service failed."
-             : "Error: Your browser doesn't support geolocation."
-         );
-         infoWindow.open(map);
-       }
- 
-       window.initMap = initMap;
-     </script>
 </head>
 <body>
     <header>
@@ -597,7 +409,9 @@ body {
            <li class="nav-item">
              <a class="nav-link" href="/Donator">DONATOR</a>
            </li>
-          
+           <li class="nav-item">
+             <a class="nav-link" href="/About">ABOUT US</a>
+           </li>
            <li class="nav-item">
              <a class="nav-link" href="/Contact"> CONTACT</a>
            </li>
@@ -622,16 +436,8 @@ body {
 
    <section class="hww" id="hwwsection">
       <form action="">
-        <h2>Choose Your Restaurant & NGOs {{responsedatdon.username}} </h2>
         <input type="text" name="search" id="search" placeholder="Search for Restaurants">
         <input type="text" name="search" id="search" placeholder="Search for NGOs">
-        <div class="menu">
-          <div class="img"><img src="assets\home\Screenshot 2024-02-21 193352.png" alt=""></div>
-          <div class="content"><h3>Dish Name</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur enim neque rem.</p></div>
-          <div class="donate">
-            <input type="submit" name="submit" id="Donate" value="Donate" class="submit">
-          </div>
-        </div>
         
       </form>
     </section>
@@ -641,68 +447,6 @@ body {
         <button><a href="/donatorregis">Join Now</a></button>
     </div>
 
-    <div id="map"></div>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFaXNvUSNlqQoqlNBgCgppWcSeYxb5kDM&callback=initMap&v=weekly&solution_channel=GMP_CCS_geolocation_v1"
-      defer
-    ></script>
-
-    <script>
-      
-let map, infoWindow;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 6,
-  });
-  infoWindow = new google.maps.InfoWindow();
-
-  const locationButton = document.createElement("button");
-
-  locationButton.textContent = "Pan to Current Location";
-  locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(
-    locationButton
-  );
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
-          infoWindow.open(map);
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        }
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-}
-
-window.initMap = initMap;
-    </script>
 
     
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
